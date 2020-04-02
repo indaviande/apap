@@ -1,21 +1,22 @@
 p {
-  @include Syne();
-  @include Normal();
+  @include Medium();
   font-size: 1em;
   line-height: 1.5;
 }
 
 h1,
-h2,
-h3,
-h5 {
-  @include Bagnard();
-  @include Normal();
+h4 {
+  @include Semibold();
+  @apply recoleta;
 }
 
-h4,
+h2,
+h3 {
+  @include Medium();
+  @apply space-grotesk;
+}
+
 a {
-  @include Syne();
   @include Bold();
   text-transform: uppercase;
 }
@@ -35,29 +36,35 @@ h6 {
 }
 
 h1 {
-  font-size: 3.33em;
-  line-height: 1.1;
+  font-size: 2.82em;
+  line-height: 1;
+  color: theme('colors.yellow');
 }
 
 h2 {
-  font-size: 2.22em;
+  font-size: 1.05em;
   line-height: 1;
+  color: theme('colors.pink');
 }
 
 h3 {
-  font-size: 1.55em;
-  line-height: 1.15;
+  font-size: 1em;
+  line-height: 1;
+  color: theme('colors.pink');
 }
 
 h4 {
-  font-size: 1em;
-  line-height: 1.2;
-  text-decoration: underline;
+  font-size: 0.7em;
+  line-height: 1.375;
+  color: theme('colors.yellow');
 }
 
 h5 {
-  font-size: 1.11em;
-  line-height: 1.15;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.47rem;
+  line-height: 1;
 }
 
 a {

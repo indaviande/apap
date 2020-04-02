@@ -1,12 +1,36 @@
 {{ define "header" }}
-<!-- <header class="w-full h-24">
-  something
-</header> -->
-{{ end }} {{ define "main" }}
-<main class="bg-red-300" data-barba="wrapper">
-	<article data-barba="container">
+<header class="w-full py-8 lg:py-16 relative flex flex-wrap">
+	<div class="w-full md:w-3/4 titles order-2 md:order-1">
+		<h1 class="mb-6">Joyeux
+			Anniversaire
+			Apap’</h1>
+		<h2 class="pr-8 mb-2 md:mb-4">Toutes les heures* un cadeau
+			pour le plus rigolo
+			de tous les kakapos</h2>
+		<h5 class="text-white">*pendant une semaine</h4>
+	</div>
 
-	</article>
+	<div class="h-24 md:h-auto mb-4 md:mb-0 w-full md:w-1/4 apap-kakapo order-1 md:order-2 md:mt-2 lg:-mt-8">
+	</div>
+</header>
+{{ end }}
+
+
+
+{{ define "main" }}
+<main class="">
+	<ul class="pl-0">
+		{{ range .Params.videos }}
+		<li class="list-none">
+			<h4 class="mb-2">{{ .date }}</h4>
+			<h2 class="mb-5">{{ .title }}</h2>
+			<div class='embed-container mb-10'>
+				<iframe src='{{ .url }}' frameborder='0' allowfullscreen webkitAllowFullScreen mozallowfullscreen
+					allowFullScreen></iframe>
+			</div>
+		</li>
+		{{ end }}
+	</ul>
 </main>
 
 {{end}}
