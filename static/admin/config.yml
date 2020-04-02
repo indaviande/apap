@@ -25,4 +25,4 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: Title, name: title, widget: string }
       - { label: Date, name: writtenDate, widget: string }
-      - { label: Url de la vidéo, name: url, widget: url }
+      - { label: Url de la vidéo, name: url, widget: string }
