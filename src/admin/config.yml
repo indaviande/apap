@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: 'static/images'
+public_folder: 'images'
+collections:
+  - name: 'pages'
+    label: 'Pages'
+    create: false # Allow users to create new documents in this collection
+    files:
+      - label: 'Homepage'
+        name: 'Homepage'
+        file: 'content/_index.md'
+        fields:
+          - { label: Titre, name: title, widget: string }
+          - { label: Description, name: description, widget: string }
+          - { label: Sous-titre, name: subtitle, widget: string }
+  - name: 'videos' # Used in routes, e.g., /admin/collections/blog
+    label: 'Vidéos' # Used in the UI
+    folder: 'content/videos' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: writtenDate, widget: string }
+      - { label: Url de la vidéo, name: url, widget: url }
