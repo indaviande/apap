@@ -26,3 +26,11 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Date, name: writtenDate, widget: string }
       - { label: Url de la vidéo, name: url, widget: string }
+      - {
+          label: "Ordre d'affichage",
+          name: 'weight',
+          widget: 'number',
+          valuetype: 'int',
+          required: false,
+        }
+      - { label: 'Type (laisser "video")', name: 'type', widget: 'string', default: 'video' }

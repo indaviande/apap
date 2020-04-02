@@ -1,7 +1,7 @@
 ---
 title:
 writtenDate:
-url:
-draft: false
+videoUrl:
+draft: true
 type: video
 ---
