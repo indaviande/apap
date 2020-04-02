@@ -1,7 +1,7 @@
 ---
-title: '{{ replace .Name "-" " " | title }}'
-date:
-videoURL:
-draft: false
+title:
+writtenDate:
+videoUrl:
+draft: true
 type: video
 ---
