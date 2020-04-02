@@ -1,0 +1,79 @@
+p {
+  @include Syne();
+  @include Normal();
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h5 {
+  @include Bagnard();
+  @include Normal();
+}
+
+h4,
+a {
+  @include Syne();
+  @include Bold();
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  a {
+    font-family: inherit;
+    font-size: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+}
+
+h1 {
+  font-size: 3.33em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2.22em;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 1.55em;
+  line-height: 1.15;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.2;
+  text-decoration: underline;
+}
+
+h5 {
+  font-size: 1.11em;
+  line-height: 1.15;
+}
+
+a {
+  font-size: 1em;
+  line-height: 1.22;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  @include tran_simple(0.3s);
+
+  &.no-underline {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

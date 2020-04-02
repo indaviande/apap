@@ -1,0 +1,9 @@
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+
+  img[src]:after {
+    content: none !important;
+  }
+}

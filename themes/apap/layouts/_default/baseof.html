@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "fr-fr" }}">
+
+    <head>
+        <title>{{ block "meta-title" . }}{{ .Site.Title }}{{ .Site.Params.homeTitle }}{{ end }}</title>
+        <meta name="description" content="{{ block "meta-description" . }}{{ .Site.Params.Description }}{{ end }}">
+        <link rel="canonical" href="{{ .Permalink }}">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {{ if .IsTranslated }}
+        {{ range .Translations }}
+        <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}"
+            title="{{ .Language.LanguageName }}">
+        {{ end }}
+        {{ end }}
+
+
+        <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.png" type="image/x-icon" />
+
+        <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/app.css">
+
+        {{ partial "opengraph.html" . }}
+
+        {{ template "_internal/google_analytics_async.html" . }}
+
+    </head>
+
+    <body>
+
+        {{ block "header" . }}
+        {{ .Content }}
+        {{ end }}
+
+        {{ block "main" . }}
+        {{ .Content }}
+        {{ end }}
+
+        {{ partial "footer.html" . }}
+
+        {{ partial "js.html" . }}
+    </body>
+
+</html>

@@ -1,0 +1,32 @@
+// Transform
+
+.transform-m50-m50 {
+  @include translator(-50%,-50%);
+}
+.transform-p50-m50 {
+  @include translator(50%,-50%);
+}
+.transform-p50-p50 {
+  @include translator(50%,50%);
+}
+.transform-m50-p50 {
+  @include translator(-50%,50%);
+}
+.transform-p50-0 {
+  @include translator(50%,0);
+}
+.transform-m50-0 {
+  @include translator(-50%,0);
+}
+.transform-0-m50 {
+  @include translator(0,-50%);
+}
+.transform-0-p50 {
+  @include translator(0,50%);
+}
+.transform-0-m100 {
+  @include translator(0,-100%);
+}
+.transform-0-p100{
+  @include translator(0,100%);
+}

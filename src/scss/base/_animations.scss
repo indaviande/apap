@@ -1,0 +1,469 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.spin {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// .spin-in {
+//   transform-origin: center;
+//   animation: spin-in 5s linear infinite;
+// }
+
+.spin-in-reverse {
+  transform-origin: center;
+  animation: spin-in 4s linear infinite reverse;
+
+  &+g {
+    transform: rotate(-30deg);
+    transform-origin: center;
+  }
+}
+
+@keyframes spin-in {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.grow {
+  transform-origin: center;
+  animation: grow 2s cubic-bezier(.46, .03, .52, .96) infinite alternate;
+}
+
+
+@keyframes grow {
+  0% {
+    transform: scale(1) rotate(-30deg);
+  }
+
+  100% {
+    transform: scale(1.075) rotate(-30deg);
+  }
+}
+
+// @keyframes sweep {
+//   0%    {opacity: 0; margin-left: -10px}
+//   100%  {opacity: 1; margin-left: 0px}
+// }
+
+// details[open] summary ~ * {
+//   animation: fade-in-bottom2top .5s ease-in-out;
+// }
+
+// details summary img {
+//   transform:rotate(0deg);
+//   transition:transform .3s ease-in-out;
+// }
+
+// details[open] summary img {
+//   transform:rotate(-180deg);
+// }
+
+// summary::-webkit-details-marker, summary::marker {
+// 	display: none!important;
+// }
+
+// html.no-details details > summary::before, details > summary::before, summary::before {
+// 	display: none!important;
+// 	content:""!important;
+// }
+
+
+.dim {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.65;
+  }
+}
+
+
+/* Arrow moving */
+
+@keyframes arrow-to-right {
+
+  0%,
+  100% {
+    transform: translateX(-5px)
+  }
+
+  50% {
+    transform: translateX(5px)
+  }
+}
+
+.arrow-to-right {
+  animation: arrow-to-right 2s ease-in-out infinite;
+}
+
+/* Arrow moving on hover */
+
+.hover-arrow-to-right {
+  & .arrow {
+    @include translator(0, 0);
+    @apply ease;
+  }
+
+  &:hover .arrow {
+    @include translator(5px, 0);
+  }
+}
+
+
+
+.hover-arrow-to-top {
+  & .arrow-top {
+    @include translator(0, 0);
+    @apply ease;
+  }
+
+  &:hover .arrow-top {
+    @include translator(0, -5px);
+  }
+}
+
+
+
+
+/* Fadein effects on project page */
+
+@keyframes fade-in-left2right {
+  0% {
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fade-in-right2left {
+  0% {
+    opacity: 0;
+    transform: translateX(5%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fade-in-bottom2top {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fade-in-top2bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* Animating transitions for project blocks */
+// :root {
+// 	--transition-timing:0.75s;
+// }
+
+//   .fadein,
+//   .left2right_fadein,
+//   .right2left_fadein,
+//   .top2bottom_fadein,
+//   .bottom2top_fadein {
+//     opacity:0;
+//     transition: all var(--transition-timing) ease;
+//   }
+
+//   .in-viewport.fadein {
+//     opacity: 1;
+//   }
+
+//   .in-viewport.left2right_fadein {
+//     animation: fade-in-left2right var(--transition-timing) linear forwards;
+//   }
+
+//   .in-viewport.right2left_fadein {
+//     animation: fade-in-right2left var(--transition-timing) linear forwards;
+//   }
+
+//   .in-viewport.top2bottom_fadein {
+//     animation: fade-in-top2bottom var(--transition-timing) ease forwards;
+//   }
+
+//   .in-viewport.bottom2top_fadein {
+//     animation: fade-in-bottom2top var(--transition-timing) ease forwards;
+//   }
+
+/* 
+  .in-viewport .buildingresult {
+    animation: popIn 1s ease forwards;
+  } */
+
+/* Hue-Rotate effect on background imge for category links in Homepage */
+
+// @keyframes background-hue-rotate {
+
+//   0%,
+//   100% {
+//     filter: hue-rotate(0deg);
+//   }
+
+//   50% {
+//     filter: hue-rotate(360deg);
+//   }
+// }
+
+// @keyframes background-hue-rotate-bw {
+
+//   0%,
+//   100% {
+//     filter: hue-rotate(0deg) grayscale(80%);
+//   }
+
+//   50% {
+//     filter: hue-rotate(360deg) grayscale(80%);
+//   }
+// }
+
+/* Color Change for animated wave on Homepage */
+
+// @keyframes colorChange {
+
+//   0%,
+//   100% {
+//     stroke: #54dbfd;
+//   }
+
+//   50% {
+//     stroke: #beb7fd;
+//   }
+// }
+
+/* dynamic underlining on "Double.cat" for homepage */
+
+// @keyframes underline-looping-horizontal {
+
+//   0%,
+//   100% {
+//     transform: scaleX(0);
+//   }
+
+//   20%,
+//   80% {
+//     transform: scaleX(1);
+//   }
+// }
+
+
+/* Border-radius changing on footer social icons */
+
+// @keyframes morph-fb {
+
+//   0%,
+//   100% {
+//     border-radius: 50% 50% 70% 30% / 53% 40% 60% 47%;
+//   }
+
+//   50% {
+//     border-radius: 40% 60%;
+//   }
+// }
+
+// @keyframes morph-tw {
+
+//   0%,
+//   100% {
+//     border-radius: 62% 38% 26% 74% / 37% 56% 44% 64%;
+//   }
+
+//   25% {
+//     border-radius: 74% 35% 68% 31% / 59% 67% 60% 57%;
+//   }
+// }
+
+// @keyframes morph-insta {
+
+//   0%,
+//   100% {
+//     border-radius: 42% 58% 58% 42% / 52% 76% 24% 48%;
+//   }
+
+//   50% {
+//     border-radius: 92% 86% 78% 100% / 100% 84% 93% 74%;
+//   }
+// }
+
+/* Slide-Effect on H1 title for homepage */
+
+// @keyframes slide-in {
+//   0% {
+//     opacity: 0;
+//     transform: translateY(-100%);
+//   }
+
+//   60% {
+//     opacity: 1;
+//     transform: translateY(20%);
+//   }
+
+//   100% {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+
+// @keyframes slide-out {
+//   0% {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+
+//   60% {
+//     opacity: 0;
+//     transform: translateY(120%);
+//   }
+
+//   100% {
+//     opacity: 0;
+//     transform: translateY(100%);
+//   }
+// }
+
+/* Hover styles */
+
+// @keyframes rotate-5-scale-11 {
+//   0%,100% {
+//     transform:rotate(0) scale(1.1);
+//   }
+
+//   50% {
+//     transform:rotate(-5deg);
+//   }
+// }
+
+// .bloc-2-blue-cards a:hover img:first-child {
+//   animation: rotate-5-scale-11 2s .3s ease-in-out infinite;
+//   transform: scale(1.1);
+// }
+
+// .social-links a {
+//   opacity:1;
+//   @apply transition-ease;
+
+//   &:hover {
+//     opacity:.7;
+//   }
+// }
+
+
+@keyframes rotate-360 {
+  0% {
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(0) scale(.5);
+  }
+
+  100% {
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+}
+
+
+@keyframes anim_growing {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.anim-growing {
+  animation: anim_growing 2s ease-out infinite;
+}
+
+/* Progress bar */
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: theme('colors.blue.800');
+  transition: background-color .5s;
+}
+
+
+@keyframes y-translation {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.db_y-translate {
+  animation: y-translation 2s infinite;
+}
+
+.mix-blend-color {
+  mix-blend-mode: color;
+}

@@ -1,0 +1,15 @@
+.svg-responsive {
+  width: 75%;
+}
+
+@screen md {
+  .svg-responsive {
+    width: 50%;
+  }
+}
+
+@screen lg {
+  .svg-responsive {
+    width: 24.37%;
+  }
+}

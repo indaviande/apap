@@ -1,0 +1,9 @@
+.placeholder-grey-500::placeholder, .placeholder-grey-500:focus {
+  color:theme('colors.grey.500')!important;
+  @apply opacity-100;
+}
+
+.placeholder-yellow-700::placeholder, .placeholder-yellow-700:focus {
+  color:theme('colors.yellow.700')!important;
+  @apply opacity-100;
+}

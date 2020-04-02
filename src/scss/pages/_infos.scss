@@ -1,0 +1,41 @@
+.chacha-spin {
+  max-width: 140px;
+}
+
+nav {
+  a:last-child {
+    border-right: none;
+  }
+}
+
+.sub-title {
+  text-decoration: none;
+  @apply text-red-300 border-b border-red-300 py-3 px-8;
+}
+
+@screen lg {
+  .sub-title {
+    @apply py-3 px-12;
+  }
+}
+
+.deroule-section:last-child {
+  border-bottom: none;
+}
+
+.reponse {
+  transition: background-color .3s cubic-bezier(1, 0, 0, 1);
+  animation: backgroundChange 1.5s infinite;
+}
+
+@keyframes backgroundChange {
+
+  0%,
+  100% {
+    @apply bg-beige;
+  }
+
+  50% {
+    @apply bg-white;
+  }
+}

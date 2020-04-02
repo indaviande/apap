@@ -1,0 +1,127 @@
+$bezier: cubic-bezier(.2,.45,.45,1);
+
+:root {
+  --p-fs:16px;
+  --small-fs:12px;
+  --h1-fs:33px;
+  --h2-fs:32px;
+  --h3-fs:24px;
+  --h4-fs:20px;
+  --h5-fs:14px;
+  --h6-fs:20px;
+  --blockquote-fs:26px;
+  --blockquote-small-fs:18px;
+  --header-icon-height:60px;
+  --top-search-pl:12px;
+  --container-width: 1360px;
+}
+
+
+@screen md {
+  :root {
+    --p-fs:16px;
+    --small-fs:14px;
+    --h1-fs:44px;
+    --h2-fs:34px;
+    --h3-fs:26px;
+    --h4-fs:20px;
+    --h5-fs:16px;
+    --h6-fs:24px;
+    --blockquote-fs:30px;
+    --blockquote-small-fs:20px;
+    --header-icon-height:60px;
+    --top-search-pl:12px;
+  }
+}
+
+@screen lg {
+  :root {
+    --p-fs:16px;
+    --small-fs:14px;
+    --h1-fs:52px;
+    --h2-fs:38px;
+    --h3-fs:28px;
+    --h4-fs:20px;
+    --h5-fs:16px;
+    --h6-fs:26px;
+    --blockquote-fs:34px;
+    --blockquote-small-fs:21px;
+    --header-icon-height:80px;
+    --top-search-pl:24px;
+  }
+}
+
+
+// Variables de Vianney from Tailwind
+// $black-700:'#1F2B44';
+// $black-900:'#000000';
+// $grey-500: '#F2F3FF';
+// $grey-700: '#8A93A5';
+// $white: '#ffffff';
+// $blue-200: '#85E1FF';
+// $blue-700:'#3590FF';
+// $blue-900:'#3066FF';
+// $red-500:'#FFA994';
+// $red-700: '#FD4E5C';
+// $orange-500: '#FFC896';
+// $orange-700: '#FF8252';
+// $yellow-500:'#EAF2AC';
+// $yellow-700: '#FFD971';
+// $green-500:'#89E5B6';
+// $green-700: '#36CCB5';
+// $purple-500: '#BAB2FF';
+// $purple-700: '#B072EC';
+
+
+// Variables d'Arnaud
+// $white: #FFFFFF;
+// $gray_lighter: #EBEBEB;
+// $gray_light: #D1D1D1;
+// $gray: #A8A8A8;
+// $gray_dark: #666666;
+// $gray_darker: #2E2E2E;
+// $black: #000000;
+
+// $green_lightest: #EBFFF6;
+// $green_lighter: #C2F2DD;
+// $green_light: #59CD9A;
+// // $green: #00AE62;
+// $green: #00a95f;
+// $green_dark: #107A4C;
+// $green_darker: #226448;
+// $green_darkest: #193326;
+
+
+// $blue: #0047CC;
+// $blue_dark: #202B40;
+// $blue_light: #B3CDFF;
+// $blue_lighter: #D9E6FF;
+
+// $violet: #641F99;
+// $violet_dark: #322040;
+// $violet_light: #CFC3D9;
+// $violet_lighter: #F6EBFF;
+
+// $orange_lightest: #FFEEEB;
+// $orange_lighter: #FFCDC3;
+// $orange_light: #FFB5A6;
+// $orange: #FF9580;
+// $orange_dark: #A25E51;
+// $orange_darker: #402520;
+// $orange_darkest: #1A1514;
+
+
+// $yellow_lightest: #FFFAEB;
+// $yellow_lighter: #FFE495;
+// $yellow_light: #FFD558;
+// $yellow: #FFBF00;
+// $yellow_dark: #E6AC00;
+// $yellow_darker: #CD9A00;
+// $yellow_darkest: #1A1814;
+
+// $yellow: #FFBF00;
+// $yellow_dark: #CD9A00;
+// $yellow_light: #FFEFBF;
+// $yellow_lighter: #FFFAEB;
+
+//$bezier: cubic-bezier(.2,.4,.4,1);

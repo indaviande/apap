@@ -1,0 +1,52 @@
+.launch-screen {
+	cursor: none;
+	position: relative;
+
+	div#cursor {
+		position: absolute;
+		width: 50px;
+		height: 25px;
+		background-image: url('../images/cursor.svg');
+		transform-origin: 100% 50%;
+	}
+
+	.launch-button {
+		cursor: none;
+	}
+
+	.launch-screen {
+		transition: opacity 2s ease;
+	}
+
+	.activate {
+		transition: all 2s ease;
+	}
+}
+
+
+.intro-texte {
+	.intro-texte-content {
+		height: auto;
+	}
+
+	h3 {
+		max-width: 440px;
+	}
+}
+
+@screen lg {
+	.intro-texte {
+		.intro-texte-content {
+			height: 75vh;
+		}
+
+		.intro-texte-button {
+			height: 25vh;
+
+			&:hover,
+			& a:hover {
+				cursor: url('../images/cursor_button.png') 18 0, auto;
+			}
+		}
+	}
+}

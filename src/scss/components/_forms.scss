@@ -1,0 +1,75 @@
+// // Input Form
+
+// .comment-respond, .checkbox-custom, .contact-form {
+//   input[type=radio],
+//   input[type=checkbox]{
+//     /* hide original inputs */
+//     visibility: hidden!important;
+//     position: absolute!important;
+//   }
+//   input[type=radio] + label, label.checkbox:before,
+//   input[type=checkbox] + label{
+//     cursor:pointer;
+//   }
+//   input[type=radio] + label:before{
+//     height:20px;
+//     margin-right: 4px;
+//     content: " ";
+//     display:inline-block;
+//     vertical-align: middle;
+//     @include tran_simple(.3s);
+//     border:1px solid theme('colors.yellow.700');
+//     border-radius:10px;
+//   }
+
+//   label.checkbox:before,
+//   input[type=checkbox] + label:before{
+//     height:16px;
+//     margin-right: 4px;
+//     content: " ";
+//     display:inline-block;
+//     vertical-align: middle;
+//     @include tran_simple(.3s);
+//     border:1px solid theme('colors.yellow.700');
+//   }
+
+//   /* CUSTOM RADIO AND CHECKBOX STYLES */
+//   /* DEFAULT */
+//   input[type=radio] + label:before {
+//     border-radius:50%;
+//     width:20px;
+//     border:1px solid theme('colors.yellow.700');
+//     margin-bottom: 3px;
+//     margin-right: 10px;
+//   }
+//   input[type=checkbox] + label:before, label.checkbox:before{
+//     border-radius:2px;
+//     width:16px;
+//     border:1px solid theme('colors.yellow.700');
+//     margin-right: 10px;
+//     background-color:transparent;
+//     margin-bottom: 5px;
+//   }
+//   /* CHECKED */
+//   input[type=radio]:checked + label:before
+//   {
+//     width:14px;
+//     height:14px;
+//     border-radius:50%;
+//     padding:3px;
+//     background-color:theme('colors.yellow.700');
+//   }
+//   input[type=checkbox]:checked + label:before {
+//     background-color:theme('colors.yellow.700');
+//   }
+// }
+
+// input[type="email"].form-control {
+//   background-color: transparent;
+//   border:none;
+//   color:theme('colors.yellow.700');
+// }
+
+// input[type="checkbox"]:required:invalid + .confirmation_checkbox::before {
+//   border-color: theme('colors.orange.500');
+// }

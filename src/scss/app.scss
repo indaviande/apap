@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+
+@import 'abstracts/variables',
+'abstracts/mixins',
+'abstracts/placeholders';
+
+@import 'base/fonts',
+'base/animations',
+'base/commons',
+'base/typography',
+'base/icons',
+'base/ie',
+'base/links',
+'base/print',
+'base/aspect-ratios';
+
+@import 'components/transforms',
+'components/button',
+'components/lists',
+'components/forms';
+
+@import 'layout/general',
+'layout/header',
+'layout/layermenu',
+'layout/footer';
+
+@import 'pages/e404',
+'pages/infos',
+'pages/questions',
+'pages/intro';
+
+// @import 'vendors/';

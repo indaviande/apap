@@ -1,0 +1,40 @@
+{{ define "header" }}
+<!-- <header class="w-full h-24">
+  something
+</header> -->
+{{ end }} {{ define "main" }}
+<main class="bg-red-300" data-barba="wrapper">
+	<article data-barba="container">
+		<!-- <section
+			class="fixed z-5 launch-screen activate min-h-screen bg-red-300 fixed h-screen w-full flex flex-col items-around justify-center">
+			<div class="container flex flex-col items-center justify-around h-screen md:h-full">
+				<div class="flex launch-content items-center flex-col justify-center">
+					<svg class="spin" width="132" height="132" viewBox="0 0 132 132" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M71.7477 64.6137C71.5948 59.3071 62.9778 56.9646 60.8 64.0262C57.481 75.1135 72.7605 75.3019 71.7477 64.6137Z"
+							fill="#0F288C" />
+						<path
+							d="M20.2487 105.344C34.5513 120.156 57.2981 128.142 77.7446 125.446C95.1468 123.142 111.044 112.1 119.683 91.2814C139.216 51.3124 111.199 20.177 77.2688 8.43321C47.7581 -1.84156 18.2349 19.0532 9.55385 47.0168C2.66291 68.8787 3.62554 88.1407 20.2487 105.344ZM51.4046 56.8827C61.9636 36.8392 86.442 48.7258 84.1542 64.9268C80.8063 97.8878 34.7801 88.2946 51.4046 56.8827Z"
+							fill="#0F288C" />
+					</svg>
+					<div class="button-space h-4 md:h-16 w-full"></div>
+					<h2 class="text-center text-blue-800 w-full md:w-3/4 lg:w-1/2">
+						Merci d’activer le son pour une expérience oooooptimale.
+					</h2>
+				</div>
+
+				<div class="button">
+					<div id="cursor"></div>
+					<button class="launching launch-button bg-blue-800 px-12 py-8 big-cta launch-button text-white uppercase">
+						Commencer
+					</button>
+				</div>
+			</div>
+		</section> -->
+
+		{{ partial "intro-texte.html" . }}
+	</article>
+</main>
+
+{{end}}

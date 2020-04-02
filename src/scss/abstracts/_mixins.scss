@@ -1,0 +1,48 @@
+@mixin Normal() {
+  font-weight: 400;
+}
+
+@mixin Bold() {
+  font-weight: 700;
+}
+
+strong {
+  @include Bold();
+}
+
+@mixin Ease() {
+  transition: all .3s ease;
+}
+
+@mixin Dim() {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.65;
+  }
+}
+
+@mixin Bagnard() {
+  font-family: "Bagnard", sans-serif;
+}
+
+@mixin Syne() {
+  font-family: "Syne", sans-serif;
+}
+
+@mixin translator($x, $y) {
+  transform: translateX($x) translateY($y);
+}
+
+@mixin tran_simple($timing) {
+  transition: all $timing ease-in-out;
+}
+
+@mixin tran_adv($property, $timing) {
+  transition: $property $timing ease-in-out !important;
+}
+
+// @mixin tran_bezier($timing) {
+//   transition: all $timing $bezier;
+// }

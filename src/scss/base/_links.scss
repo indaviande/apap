@@ -1,0 +1,30 @@
+// .link {
+//   font-family: 'Rubik';
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 14px;
+//   line-height: 1.6;
+//   /* or 22px */
+//   text-align: center;
+//   letter-spacing: 0.1em;
+//   text-transform: uppercase;
+// }
+
+a.infos-underline-link {
+  font-family: Syne;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.47;
+  text-decoration: underline;
+  text-transform: none;
+}
+
+a.infos-no-underline-link {
+  font-family: Syne;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.47;
+  text-transform: none;
+}

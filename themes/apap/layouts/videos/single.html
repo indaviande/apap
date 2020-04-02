@@ -1,0 +1,34 @@
+{{ define "meta-title" }}{{ .Title }} &ndash; {{ .Site.Title }}{{ end }}
+{{ define "meta-description" }}{{ .Description }}{{ end }}
+
+{{ define "main" }}
+
+{{ partial "link-infos.html" . }}
+
+<section class="question flex flex-wrap flex-col md:flex-row relative items-stretch">
+  <div
+    class="question-text w-full py-16 lg:w-2/5 lg:h-full lg:min-h-screen py-8 container flex flex-col justify-center {{ .Params.backgroundColorLeft }}">
+    <h1 class="text-white my-8 lg:my-16 w-full lg:w-11/12">{{.Params.question }} </h1>
+    <div class="question-text-shapes flex">
+      {{ range .Params.shapes }}
+      <img class="{{ .classes }}" src="{{ .Site.BaseURL }}/images/{{ .url }}">
+      <img class="{{ .classes }}" src="{{ .Site.BaseURL }}/images/{{ .url }}">
+      <img class="{{ .classes }}" src="{{ .Site.BaseURL }}/images/{{ .url }}">
+      {{ end}}
+    </div>
+  </div>
+  <div class="answer-text w-full lg:w-3/5 lg:min-h-screen flex items-end {{ .Params.backgroundColorRight }} ">
+    <div class="h-full py-8 md:py-16 bg-yellow-500 w-full flex items-center justify-center">
+      {{ range .Params.button }}
+      <a href="{{ .Site.BaseURL }}/{{ .url }}" class="btn relative btn-oui-parti ">
+        {{ .text }}
+        <span class="absolute arrow-blink">→ </span>
+        <span class="absolute arrow-blink">→ </span>
+      </a>
+      {{ end }}
+    </div>
+
+  </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,50 @@
+.btn {
+  @include Syne();
+  @include Bold();
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1.22;
+  text-align: center;
+  padding: 25px 25px;
+  text-decoration: none;
+  @apply bg-beige;
+}
+
+
+
+.launch-button {
+  @include Syne();
+  @include Bold();
+  font-size: 1.33em;
+}
+
+.btn-oui-parti {
+  font-size: 1.66em;
+  line-height: 1.2;
+  @apply bg-yellow-500 text-blue-800 uppercase;
+}
+
+.btn-small-cta {
+  height: 50%;
+  @apply w-full;
+}
+
+.half-height {
+  height: 100%;
+}
+
+@screen lg {
+  .half-height {
+    height: 50%;
+  }
+
+  .launch-button {
+    font-size: 1.66em;
+  }
+}
+
+.link-infos {
+  top: 20px;
+  right: 20px;
+  @apply absolute text-yellow-500;
+}

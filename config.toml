@@ -1,0 +1,29 @@
+baseURL = "https://apap.netlify.com/"
+languageCode = "fr-fr"
+languageLang = "fr"
+defaultContentLanguage = "fr"
+title = "Joyeux Anniversaire Apap'"
+theme = "apap"
+googleAnalytics = ""
+disableLiveReload = false
+disableKinds = ["RSS","taxonomy", "taxonomyTerm"]
+relativeURLs = true
+staticDir = "static"
+
+[languages]
+  [languages.fr]
+    languageName = "Français"
+    languageCode = "fr-fr"
+    languageLang = "fr"
+    weight = 1
+    contentDir = "content"
+
+[params]
+  description = "Apap' est un être drôlement sympathique qui mérite bien quelques vidéos."
+  homeTitle = " - Le meilleur des kakapos"
+  linkedin = ""
+  og_image = "images/visuel-partage.jpg"
+  mail = "contact@double.cat"
+
+[markup.goldmark.renderer] 
+unsafe= true
