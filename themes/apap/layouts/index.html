@@ -1,13 +1,13 @@
 {{ define "header" }}
-<header class="w-full py-8 lg:py-16 relative flex flex-wrap">
-	<div class="w-full md:w-3/4 titles order-2 md:order-1">
-		<h1 class="mb-6">{{ .Params.title }}</h1>
-		<h2 class="pr-8 mb-2 md:mb-4">{{ .Params.description }}</h2>
-		<h5 class="text-white">{{ .Params.subtitle }}</h4>
-	</div>
+<header class="w-full py-8 lg:py-16">
 
-	<div class="h-24 md:h-auto mb-4 md:mb-0 w-full md:w-1/4 apap-kakapo order-1 md:order-2 md:mt-2 lg:-mt-8">
-	</div>
+	<h1 class="mb-6">Joyeux
+		Anniversaire
+		Apap’</h1>
+	<h2 class="pr-8 mb-4">Toutes les heures* un cadeau
+		pour le plus rigolo
+		de tous les kakapos</h2>
+	<h5 class="text-white">*pendant une semaine</h4>
 </header>
 {{ end }}
 
@@ -15,19 +15,11 @@
 
 {{ define "main" }}
 <main class="">
+	{{ range .Params.videos }}
 	<ul class="pl-0">
-		{{ $videos := (where .Site.RegularPages "Type" "video").ByWeight }}
-		{{ range $videos }}
-		<li class="list-none">
-			<h4 class="mb-2">{{ .Params.writtenDate }}</h4>
-			<h2 class="mb-5">{{ .Params.title }}</h2>
-			<div class='embed-container mb-10'>
-				<iframe src='{{ .Params.videoUrl }}' frameborder='0' allowfullscreen webkitAllowFullScreen mozallowfullscreen
-					allowFullScreen></iframe>
-			</div>
-		</li>
-		{{ end }}
+		<li class="list-none">{{ .title }}</li>
 	</ul>
+	{{ end }}
 </main>
 
 {{end}}
