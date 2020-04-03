@@ -24,6 +24,7 @@ staticDir = "static"
   linkedin = ""
   og_image = "images/visuel-partage.jpg"
   mail = "contact@double.cat"
+  footer = "Fait par les chats."
 
 [markup.goldmark.renderer] 
 unsafe= true

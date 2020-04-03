@@ -1,20 +1,11 @@
-// .icon {
-//   display: inline-block;
-//   width: 1em;
-//   height: 1em;
-//   stroke-width: 0;
-//   stroke: currentColor;
-//   fill: currentColor;
-// }
+.apap-kakapo {
+  background-image: url('../images/apap.svg');
+  // right: -140px;
+  // top: 70px;
 
-// .icon-logo-silicon {
-//   width: 0.919921875em;
-// }
+  @apply bg-no-repeat bg-contain;
 
-// .icon-arrow {
-//   width: 48px !important;
-//   &.reverse {
-//     transform-origin: center center;
-//     transform: rotate(180deg);
-//   }
-// }
+  &:hover {
+    background-image: url('../images/kakapo.svg');
+  }
+}
