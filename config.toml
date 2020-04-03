@@ -28,8 +28,9 @@ unsafe= true
     for = "/**.html"
     [server.headers.values]
       Content-Security-Policy = "script-src localhost:1313"
-      # Referrer-Policy = "strict-origin-when-cross-origin"
+      Referrer-Policy = "strict-origin-when-cross-origin"
       Referrer-Policy = "access-control-allow-origin"
       X-Content-Type-Options = "nosniff"
       X-Frame-Options = "DENY"
       X-XSS-Protection = "1; mode=block"
+      Access-Control-Allow-Origin = "*"
