@@ -20,34 +20,32 @@ const server = browserSync.create();
 export const clean = () => del(['static']);
 
 export const styles = () => {
-	return src('src/scss/app.scss')
-		.pipe(gulpif(!PRODUCTION, sourcemaps.init()))
-		.pipe(sass().on('error', sass.logError))
-		.pipe(
-			postcss([
-				atimport(),
-				tailwindcss('./tailwind.config.js'),
-				postcssPresetEnv({ stage: 1 }),
-				...(process.env.NODE_ENV === 'production'
-					? [
-							purgecss({
-								content: ['./themes/apap/layouts/**/*.html'],
-								defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-							})
-					  ]
-					: [
-							purgecss({
-								content: ['./themes/apap/layouts/**/*.html'],
-								defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-							})
-					  ])
-			])
-		)
-		.pipe(gulpif(PRODUCTION, postcss([autoprefixer])))
-		.pipe(gulpif(PRODUCTION, cleanCss({ compatibility: 'ie8' })))
-		.pipe(gulpif(!PRODUCTION, sourcemaps.write()))
-		.pipe(dest('static/css'))
-		.pipe(server.stream());
+	return (
+		src('src/scss/app.scss')
+			.pipe(gulpif(!PRODUCTION, sourcemaps.init()))
+			.pipe(sass().on('error', sass.logError))
+			// https://gist.github.com/taylorbryant/91fc05b12472a88a8b6494f610647cd4
+			.pipe(
+				postcss([
+					atimport(),
+					tailwindcss('./tailwind.config.js'),
+					postcssPresetEnv({ stage: 1 }),
+					...(process.env.NODE_ENV === 'production'
+						? [
+								purgecss({
+									content: ['./themes/apap/layouts/**/*.html'],
+									defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+								})
+						  ]
+						: [])
+				])
+			)
+			.pipe(gulpif(PRODUCTION, postcss([autoprefixer])))
+			.pipe(gulpif(PRODUCTION, cleanCss({ compatibility: 'ie8' })))
+			.pipe(gulpif(!PRODUCTION, sourcemaps.write()))
+			.pipe(dest('static/css'))
+			.pipe(server.stream())
+	);
 };
 export const images = () => {
 	return src(['src/images/*.{jpg,jpeg,png,svg,gif}', 'src/images/**/*.{jpg,jpeg,png,svg,gif}'])
