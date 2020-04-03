@@ -7,6 +7,7 @@ import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
 import postcssPresetEnv from 'postcss-preset-env';
 import autoprefixer from 'autoprefixer';
+import purgeCss from 'gulp-purgecss';
 import tailwindcss from 'tailwindcss';
 import atimport from 'postcss-import';
 import del from 'del';
@@ -18,6 +19,17 @@ const server = browserSync.create();
 
 export const clean = () => del(['static']);
 
+gulp.task('purgecss', () => {
+	return gulp
+		.src('src/**/*.css')
+		.pipe(
+			purgecss({
+				content: ['src/**/*.html']
+			})
+		)
+		.pipe(gulp.dest('build/css'));
+});
+
 export const styles = () => {
 	return src('src/scss/app.scss')
 		.pipe(gulpif(!PRODUCTION, sourcemaps.init()))
@@ -28,6 +40,11 @@ export const styles = () => {
 		.pipe(gulpif(PRODUCTION, postcss([autoprefixer])))
 		.pipe(gulpif(PRODUCTION, cleanCss({ compatibility: 'ie8' })))
 		.pipe(gulpif(!PRODUCTION, sourcemaps.write()))
+		.pipe(
+			purgecss({
+				content: ['themes/apap/**/*.html']
+			})
+		)
 		.pipe(dest('static/css'))
 		.pipe(server.stream());
 };
