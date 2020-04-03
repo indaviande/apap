@@ -32,4 +32,4 @@ unsafe= true
       X-Content-Type-Options = "nosniff"
       X-Frame-Options = "DENY"
       X-XSS-Protection = "1; mode=block"
-      Access-Control-Allow-Origin = "https://apap.double.cat/"
+      Access-Control-Allow-Origin = "https://apap.netlify.com/"
