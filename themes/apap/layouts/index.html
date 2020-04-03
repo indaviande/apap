@@ -1,12 +1,25 @@
 {{ define "header" }}
-<!-- <header class="w-full h-24">
-  something
-</header> -->
-{{ end }} {{ define "main" }}
-<main class="bg-red-300" data-barba="wrapper">
-	<article data-barba="container">
+<header class="w-full py-8 lg:py-16">
 
-	</article>
+	<h1 class="mb-6">Joyeux
+		Anniversaire
+		Apap’</h1>
+	<h2 class="pr-8 mb-4">Toutes les heures* un cadeau
+		pour le plus rigolo
+		de tous les kakapos</h2>
+	<h5 class="text-white">*pendant une semaine</h4>
+</header>
+{{ end }}
+
+
+
+{{ define "main" }}
+<main class="">
+	{{ range .Params.videos }}
+	<ul class="pl-0">
+		<li class="list-none">{{ .title }}</li>
+	</ul>
+	{{ end }}
 </main>
 
 {{end}}
