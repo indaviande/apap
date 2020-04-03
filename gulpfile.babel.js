@@ -7,44 +7,45 @@ import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
 import postcssPresetEnv from 'postcss-preset-env';
 import autoprefixer from 'autoprefixer';
-import purgeCss from 'gulp-purgecss';
 import tailwindcss from 'tailwindcss';
 import atimport from 'postcss-import';
 import del from 'del';
 import browserSync from 'browser-sync';
 import imagemin from 'gulp-imagemin';
+import purgecss from '@fullhuman/postcss-purgecss';
 const PRODUCTION = yargs.argv.prod;
 
 const server = browserSync.create();
 
 export const clean = () => del(['static']);
 
-gulp.task('purgecss', () => {
-	return gulp
-		.src('src/**/*.css')
-		.pipe(
-			purgecss({
-				content: ['src/**/*.html']
-			})
-		)
-		.pipe(gulp.dest('build/css'));
-});
-
 export const styles = () => {
 	return src('src/scss/app.scss')
 		.pipe(gulpif(!PRODUCTION, sourcemaps.init()))
 		.pipe(sass().on('error', sass.logError))
 		.pipe(
-			postcss([atimport(), tailwindcss('./tailwind.config.js'), postcssPresetEnv({ stage: 1 })])
+			postcss([
+				atimport(),
+				tailwindcss('./tailwind.config.js'),
+				postcssPresetEnv({ stage: 1 }),
+				...(process.env.NODE_ENV === 'production'
+					? [
+							purgecss({
+								content: ['./themes/apap/layouts/**/*.html'],
+								defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+							})
+					  ]
+					: [
+							purgecss({
+								content: ['./themes/apap/layouts/**/*.html'],
+								defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+							})
+					  ])
+			])
 		)
 		.pipe(gulpif(PRODUCTION, postcss([autoprefixer])))
 		.pipe(gulpif(PRODUCTION, cleanCss({ compatibility: 'ie8' })))
 		.pipe(gulpif(!PRODUCTION, sourcemaps.write()))
-		.pipe(
-			purgecss({
-				content: ['themes/apap/**/*.html']
-			})
-		)
 		.pipe(dest('static/css'))
 		.pipe(server.stream());
 };

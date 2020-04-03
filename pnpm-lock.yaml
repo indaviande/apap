@@ -4,6 +4,7 @@ devDependencies:
   '@babel/core': 7.8.4
   '@babel/preset-env': 7.8.4_@babel+core@7.8.4
   '@babel/register': 7.8.3_@babel+core@7.8.4
+  '@fullhuman/postcss-purgecss': 2.1.0
   autoprefixer: 9.7.4
   babel-loader: 8.0.6_@babel+core@7.8.4+webpack@4.41.6
   browser-sync: 2.26.7
@@ -838,6 +839,13 @@ packages:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
+  /@fullhuman/postcss-purgecss/2.1.0:
+    dependencies:
+      postcss: 7.0.27
+      purgecss: 2.1.0
+    dev: true
+    resolution:
+      integrity: sha512-zmV+cK8pAo/suKMQk1fKzDdols5ltOy86Hk51qwkiJJt4olm3t1MaUrm4U4MlA9fiYeRpLqsNop2xNoEm8DV+w==
   /@gulp-sourcemaps/identity-map/1.0.2:
     dependencies:
       acorn: 5.7.3
@@ -9150,6 +9158,7 @@ specifiers:
   '@babel/preset-env': ^7.7.6
   '@babel/register': ^7.7.4
   '@barba/core': ^2.9.7
+  '@fullhuman/postcss-purgecss': ^2.1.0
   autoprefixer: ^9.7.3
   babel-loader: ^8.0.6
   browser-sync: ^2.26.7
