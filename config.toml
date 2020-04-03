@@ -9,14 +9,7 @@ disableLiveReload = false
 disableKinds = ["RSS","taxonomy", "taxonomyTerm"]
 relativeURLs = true
 staticDir = "static"
-
-[languages]
-  [languages.fr]
-    languageName = "Français"
-    languageCode = "fr-fr"
-    languageLang = "fr"
-    weight = 1
-    contentDir = "content"
+contentDir = "content"
 
 [params]
   description = "Apap' est un être drôlement sympathique qui mérite bien quelques vidéos."
