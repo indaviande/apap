@@ -22,18 +22,15 @@
 			<h4 class="mb-2">{{ .Params.writtenDate }}</h4>
 			<h2 class="mb-5">{{ .Params.title }}</h2>
 
-			{{ if .Params.vimeoID }}
-			<div class='embed-container mb-10'>
+			<div class='embed-container mb-12'>
+				{{ if .Params.vimeoID }}
 				<iframe src='https://player.vimeo.com/video/{{ .Params.vimeoID }}' frameborder='0' allowfullscreen
 					webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-			</div>
-			{{ else if .Params.youtubeID }}
-			<div class='embed-container mb-10'>
+				{{ else if .Params.youtubeID }}
 				<iframe src='https://www.youtube.com/embed/{{ .Params.youtubeID }}' frameborder='0' allowfullscreen
 					webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+				{{ end }}
 			</div>
-			{{ end }}
-
 
 		</li>
 		{{ end }}
