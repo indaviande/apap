@@ -25,7 +25,8 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: Title, name: title, widget: string }
       - { label: Date, name: writtenDate, widget: string }
-      - { label: Url de la vidéo, name: videoUrl, widget: string }
+      - { label: Vimeo ID, name: vimeoID, widget: string }
+      - { label: Youtube ID, name: youtubeID, widget: string }
       - {
           label: "Ordre d'affichage",
           name: 'weight',
