@@ -27,21 +27,19 @@
 
     </head>
 
-    <body class="bg-orange w-full lg:w-3/4 xl:w-3/5 mx-auto">
-        <div class="container">
+    <body>
 
-            {{ block "header" . }}
-            {{ .Content }}
-            {{ end }}
+        {{ block "header" . }}
+        {{ .Content }}
+        {{ end }}
 
-            {{ block "main" . }}
-            {{ .Content }}
-            {{ end }}
+        {{ block "main" . }}
+        {{ .Content }}
+        {{ end }}
 
-            {{ partial "footer.html" . }}
+        {{ partial "footer.html" . }}
 
-            {{ partial "js.html" . }}
-        </div>
+        {{ partial "js.html" . }}
     </body>
 
 </html>

@@ -2,14 +2,6 @@
   font-weight: 400;
 }
 
-@mixin Medium() {
-  font-weight: 500;
-}
-
-@mixin Semibold() {
-  font-weight: 600;
-}
-
 @mixin Bold() {
   font-weight: 700;
 }
@@ -29,6 +21,14 @@ strong {
   &:hover {
     opacity: 0.65;
   }
+}
+
+@mixin Bagnard() {
+  font-family: "Bagnard", sans-serif;
+}
+
+@mixin Syne() {
+  font-family: "Syne", sans-serif;
 }
 
 @mixin translator($x, $y) {

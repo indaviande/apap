@@ -7,27 +7,28 @@
 }
 
 html {
-  font-size: 22px;
+  font-size: 14px;
 }
 
 @screen md {
   html {
-    font-size: 26px;
+    font-size: 16px;
   }
 }
 
 @screen lg {
   html {
-    font-size: 34px;
+    font-size: 18px;
   }
 }
 
 body {
-  font-family: 'Space Grotesk', sans-serif;
-  @include Medium();
+  font-family: 'Syne', sans-serif;
+  @include Normal();
   font-style: normal;
-  line-height: 1.2;
-  color: theme('colors.pink');
+  line-height: 1.5;
+  color: theme('colors.darkblue');
+  background-color: theme('colors.orange');
   min-height: 100vh;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -58,15 +59,15 @@ body {
 
 @screen md {
   .container {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
   }
 }
 
 @screen xl {
   .container {
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
     @apply max-w-8xl;
   }
 }
