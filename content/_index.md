@@ -1,5 +1,7 @@
 ---
 title: Joyeux Anniversaire Apap’
-description: Toutes les heures* un cadeau pour le plus rigolo de tous les kakapos !
+description: >-
+  Toutes les heures* un cadeau pour le plus rigolo de tous les kakapos en retard
+  !
 subtitle: '*pendant une semaine ou plus si affinités'
 ---
