@@ -3,7 +3,7 @@ title:
 date:
 vimeoID:
 youtubeID:
-draft: true
 weight:
+draft: true
 type: video
 ---
