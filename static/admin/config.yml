@@ -21,6 +21,8 @@ collections:
     folder: 'content/videos' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: true
     fields: # The fields for each document, usually in front matter
       - { label: Title, name: title, widget: string }
       - { label: Date, name: writtenDate, widget: string }
@@ -33,4 +35,5 @@ collections:
           valuetype: 'int',
           required: false,
         }
+      # - { label: Draft, name: draft, widget: string, default: 'false' required: false }
       - { label: 'Type (laisser "video")', name: 'type', widget: 'string', default: 'video' }
