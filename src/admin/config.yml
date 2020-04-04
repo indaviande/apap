@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
+publish_mode: editorial_workflow
 media_folder: 'static/images'
 public_folder: 'images'
 collections:
@@ -21,11 +22,12 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     editor:
-      preview: false
+      preview: true
     fields: # The fields for each document, usually in front matter
       - { label: Title, name: title, widget: string }
       - { label: Date, name: writtenDate, widget: string }
-      - { label: Url de la vidéo, name: videoUrl, widget: string }
+      - { label: Vimeo ID, name: vimeoID, widget: string, required: false }
+      - { label: Youtube ID, name: youtubeID, widget: string, required: false }
       - {
           label: "Ordre d'affichage",
           name: 'weight',
