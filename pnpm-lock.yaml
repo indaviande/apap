@@ -17,7 +17,6 @@ devDependencies:
   gulp-if: 3.0.0
   gulp-imagemin: 6.2.0_gulp@4.0.2
   gulp-postcss: 8.0.0
-  gulp-purgecss: 2.1.0
   gulp-sass: 4.0.2
   gulp-sourcemaps: 2.6.5
   postcss-import: 12.0.1
@@ -4176,15 +4175,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Wtl6vH7a+8IS/fU5W9IbOpcaLqKxd5L1DUOzaPmlnCbX1CrG0aWdwVnC3Spn8th0m8D59YbysV5zPUe1n/GJYg==
-  /gulp-purgecss/2.1.0:
-    dependencies:
-      glob: 7.1.6
-      plugin-error: 1.0.1
-      purgecss: 2.1.0
-      through2: 3.0.1
-    dev: true
-    resolution:
-      integrity: sha512-Q8Sh+bQvDstNbGHrjAzTtB4QxuXclqlaLH8nDQw4bavhjwWt7BjPKDRGG0nlfG5Thp0hya9Ema4YrD/nHNdSeQ==
   /gulp-sass/4.0.2:
     dependencies:
       chalk: 2.4.2
@@ -9171,7 +9161,6 @@ specifiers:
   gulp-if: ^3.0.0
   gulp-imagemin: ^6.2.0
   gulp-postcss: ^8.0.0
-  gulp-purgecss: ^2.1.0
   gulp-sass: ^4.0.2
   gulp-sourcemaps: ^2.6.5
   postcss-import: ^12.0.1
